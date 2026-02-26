@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Attack Dashboard</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon">🛡️</div>
+                <h2>Cyber<span class="gradient-text">Reports</span></h2>
+            </div>
+            
+            <div class="date-selector">
+                <h3>Report History</h3>
+                <div id="date-list" class="date-list">
+                    <!-- Dates populated by JS -->
+                    <div class="loading-pulse">Scanning records...</div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="content-area">
+            <header class="main-header">
+                <div>
+                    <h1 id="report-title">Daily Intelligence</h1>
+                    <p id="report-subtitle" class="subtitle">Select a date from the sidebar to view the report.</p>
+                </div>
+                <div class="header-status">
+                    <span class="pulse-dot"></span>
+                    <span id="system-status">System Active</span>
+                </div>
+            </header>
+
+            <div id="dashboard-content" class="dashboard-content hidden">
+                <!-- Top 10 Section -->
+                <section class="attacks-section">
+                    <div class="section-header">
+                        <h2>Top 10 Global Threats</h2>
+                        <div class="line-accent"></div>
+                    </div>
+                    
+                    <div class="attacks-grid" id="attacks-grid">
+                        <!-- Cards injected by JS -->
+                    </div>
+                </section>
+
+                <!-- Lessons Section -->
+                <section class="lessons-section">
+                    <div class="section-header mt-4">
+                        <h2>Curated Teaching Lessons</h2>
+                        <div class="line-accent"></div>
+                    </div>
+                    
+                    <div class="lessons-container" id="lessons-container">
+                        <!-- Lessons injected by JS -->
+                    </div>
+                </section>
+            </div>
+            
+            <div id="empty-state" class="empty-state">
+                <div class="icon-large">📡</div>
+                <p>Waiting for data selection...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
