@@ -76,3 +76,7 @@ def favicon():
     if os.path.exists(path):
         return FileResponse(path)
     return JSONResponse(status_code=404, content={"detail": "Not found"})
+
+    <<<<<<<
+=======
+>>>>>>>
